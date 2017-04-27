@@ -69,4 +69,4 @@ var text = [
   contlist[0].innerHTML += input.value + "<br>";
 
   input.value = "";
-}
+};
