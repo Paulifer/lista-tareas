@@ -5,7 +5,7 @@ function obtenertarea(){
   contlist[0].innerHTML += input.value + "<br>";
 
   input.value = "";
-}
+};
 var miObjeto = [
 {
     "userId": 1,
@@ -69,9 +69,9 @@ var miObjeto = [
 },
 
 ];
-var info = document.getElementById('lista');
+var listado = document.getElementById('lista');
 miObjeto.forEach(function(elemento){
-  info.innerHTML += "<li>" + elemento.title + "</li>";
+  listado.innerHTML += "<li>" + elemento.title + "</li>";
 }); 
 
     
