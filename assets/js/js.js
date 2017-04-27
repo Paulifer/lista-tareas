@@ -1,12 +1,5 @@
-function obtenertarea(){
-  var input = document.getElementById("tarea");
-  var contlist = document.getElementsByClassName("list-tarea");
 
-  contlist[0].innerHTML += input.value + "<br>";
-
-  input.value = "";
-};
-var miObjeto = [
+var text = [
 {
     "userId": 1,
     "id": 1,
@@ -70,8 +63,24 @@ var miObjeto = [
 
 ];
 var listado = document.getElementById('lista');
-miObjeto.forEach(function(elemento){
+text.forEach(function(elemento){
   listado.innerHTML += "<li>" + elemento.title + "</li>";
-}); 
+ });
 
-    
+ function Tarea(valorNuevo){
+  this.userId = 1;
+  this.id = text.length;
+  this.title = valorNuevo;
+  this.completed = false;
+}
+
+  function obtenertarea(){
+    var input = document.getElementById("tarea");
+    var contlist = document.getElementsByClassName("list-tarea");
+    listado.innerHTML += "<li>" + input.value + "</li>";
+    input.value = [];
+    var newtarea = new Tarea(input.value);
+    text.push(newtarea);
+  }; 
+
+
